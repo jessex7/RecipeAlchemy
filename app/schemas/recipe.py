@@ -15,10 +15,11 @@ class BaseRecipe(BaseModel):
 class RecipeNew(BaseRecipe):
     pass
 
-class RecipeInDB(BaseRecipe):
+class Recipe(BaseRecipe):
     recipe_id: UUID
     created_at: datetime
     modified_at: datetime
 
-class RecipeOut(RecipeInDB):
-    pass
+# I like this pattern generally but this is unnecessary right now
+# class RecipeOut(Recipe): 
+#     pass
